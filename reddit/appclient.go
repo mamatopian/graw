@@ -46,7 +46,7 @@ func (a *appClient) authorize() error {
 		a.cfg.app.Username,
 		a.cfg.app.Password,
 	)
-
+	token.RefreshToken = "244280646958-ME_8JWereRph3SX73ns_ErnDtU4"
 	a.baseClient.cli = cfg.Client(ctx, token)
 	return err
 }
