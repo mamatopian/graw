@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/turnage/graw/reddit"
+	"github.com/mamatopian/graw/reddit"
 )
 
 type mockBot struct {

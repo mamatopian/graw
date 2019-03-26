@@ -37,10 +37,10 @@ package streams
 import (
 	"strings"
 
-	"github.com/turnage/graw/reddit"
+	"github.com/mamatopian/graw/reddit"
 
-	"github.com/turnage/graw/streams/internal/monitor"
-	"github.com/turnage/graw/streams/internal/rsort"
+	"github.com/mamatopian/graw/streams/internal/monitor"
+	"github.com/mamatopian/graw/streams/internal/rsort"
 )
 
 // Subreddits returns a stream of new posts from the requested subreddits. This
