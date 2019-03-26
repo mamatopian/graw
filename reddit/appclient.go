@@ -2,6 +2,7 @@ package reddit
 
 import (
 	"net/http"
+	"os"
 
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2"
@@ -46,7 +47,7 @@ func (a *appClient) authorize() error {
 		a.cfg.app.Username,
 		a.cfg.app.Password,
 	)
-	token.RefreshToken = "244280646958-ME_8JWereRph3SX73ns_ErnDtU4"
+	token.RefreshToken = os.Getenv("REDDIT_REFRESH_TOKEN")
 	a.baseClient.cli = cfg.Client(ctx, token)
 	return err
 }
