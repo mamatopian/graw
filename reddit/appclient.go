@@ -47,9 +47,14 @@ func (a *appClient) authorize() error {
 		a.cfg.app.Username,
 		a.cfg.app.Password,
 	)
+
+	if err != nil{
+		return err
+	}
+
 	token.RefreshToken = os.Getenv("REDDIT_REFRESH_TOKEN")
 	a.baseClient.cli = cfg.Client(ctx, token)
-	return err
+	return nil
 }
 
 func (a *appClient) clientCredentialsClient(ctx context.Context) *http.Client {
